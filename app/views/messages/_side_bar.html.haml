@@ -1,7 +1,7 @@
 .side-bar
   .header
     %h3.header__name
-      tora
+      = current_user.name
     %ul.header__lists
       %li.list
         = link_to new_group_path do
@@ -15,8 +15,8 @@
   .groups
     - current_user.groups.each do |group|
       .group
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .group__name
             = group.name
           .group__message
-            メッセージはまだありません。
+            = group.show_last_message
