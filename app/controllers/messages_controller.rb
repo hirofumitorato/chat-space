@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   protect_from_forgery
   before_action :set_group
+  
 
   def index
     @message = Message.new
