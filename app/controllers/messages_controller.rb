@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
+  protect_from_forgery
   before_action :set_group
+  
 
   def index
     @message = Message.new
@@ -10,6 +12,7 @@ class MessagesController < ApplicationController
     @message = @group.messages.new(message_params)
     if @message.save
       respond_to do |format|
+        format.html { redirect_to group_messages_path(@group), notice: 'メッセージが送信されました' }
         format.json
       end
     else
