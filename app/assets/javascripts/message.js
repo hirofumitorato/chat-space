@@ -1,5 +1,4 @@
 $(function(){ 
-  
 
     function buildHTML(message){
     if ( message.image ) {
@@ -41,7 +40,7 @@ $(function(){
       return html;
     };
   }
-  $('.js-form').on('submit', function(e){
+  $('.new_message').on('submit', function(e){
       e.preventDefault();
       var formData = new FormData(this);
       var url = $(this).attr('action')
