@@ -22,14 +22,18 @@
         }
       }
     }
-    .right-header {
+    .right-header__button {
       border: 1px solid $light_blue;
-      color: $light_blue;
+      color: #38aef0;
       float: right;
       height: 40px;
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
+      a{
+        color: #38aef0;
+        text-decoration: none;
+      }
     }
   }
 
