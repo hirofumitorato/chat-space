@@ -20,7 +20,7 @@ $(function(){
             <img src=${message.image} >
           </div>`
         return html;
-        } else {
+      } else {
         var html =
           `<div class="message" data-message-id=${message.id}>
             <div class="upper-message">
