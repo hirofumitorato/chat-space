@@ -82,7 +82,7 @@ $(function(){
         var insertHTML = '';
         //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
         $.each(messages, function(i, message) {
-          insertHTML += buildHT ML(message)
+          insertHTML += buildHT (message)
         });
         //メッセージが入ったHTMLに、入れ物ごと追加
         $('.messages').append(insertHTML);
@@ -90,7 +90,7 @@ $(function(){
         }
       })
       .fail(function() {
-        alert('エラー');
+        alert('error');
       });
     };
     if (document.location.href.match(/\/groups\/\d+\/messages/)) {
